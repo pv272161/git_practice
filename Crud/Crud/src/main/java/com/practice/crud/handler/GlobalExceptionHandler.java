@@ -13,7 +13,7 @@ import java.util.Date;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(StudentNotFoundException.class)
-    public ResponseEntity<ExceptionResponse> handleStudentNotFoundException(Exception ex){
+    public ResponseEntity<ExceptionResponse> handleStudentNotFoundException(StudentNotFoundException ex){
         ExceptionResponse res= new ExceptionResponse();
         res.setMsg(ex.getMessage());
         res.setStatus(HttpStatus.NOT_FOUND);
